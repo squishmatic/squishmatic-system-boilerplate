@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Audio Settings
+Comment=Adjust the volume level
+Exec=pavucontrol
+Icon=multimedia-volume-control
+Type=Application
+Categories=GNOME;GTK;System;Settings;X-XFCE-SettingsDialog;X-XFCE-HardwareSettings;
+OnlyShowIn=XFCE;
+StartupNotify=true

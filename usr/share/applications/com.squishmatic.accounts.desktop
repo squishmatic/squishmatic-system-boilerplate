@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=User Accounts
+Comment=Manage user accounts
+Exec=users-admin
+Icon=system-users
+Terminal=false
+Type=Application
+Categories=GNOME;GTK;System;Settings;X-XFCE-SettingsDialog;X-XFCE-SystemSettings;
+OnlyShowIn=XFCE;
+StartupNotify=true
+
