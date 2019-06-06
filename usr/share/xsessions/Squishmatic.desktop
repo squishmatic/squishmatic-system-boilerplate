@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Squishmatic session
+Comment=Use this session to run Squishmatic project with Xfce as desktop environment
+Exec=startsquishmatic
+Icon=
+Type=Application
+DesktopNames=XFCE

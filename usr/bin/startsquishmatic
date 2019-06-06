@@ -1,0 +1,31 @@
+#!/bin/sh
+#
+#  Copyright (C) Squishmatic project team <project@squishmatic.com>
+#
+#  This program is free software; you can redistribute it and/or modify
+#  it under the terms of the GNU General Public License as published by
+#  the Free Software Foundation; either version 2 of the License, or
+#  (at your option) any later version.
+#
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+#  GNU General Public License for more details.
+#
+#  You should have received a copy of the GNU General Public License
+#  along with this program; if not, see <http://www.gnu.org/licenses>.
+#
+
+
+# we don't want to upset pre-existing panel configurations
+# using a custom xfconf prefixed channel to avoid mistakes
+#
+# https://git.xfce.org/xfce/xfce4-panel/tree/common/panel-xfconf.c#n99
+# https://git.xfce.org/xfce/xfce4-panel/tree/migrate/main.c#n45
+# https://git.xfce.org/xfce/xfce4-panel/tree/panel/panel-application.c#n209
+#
+XFCE_PANEL_CHANNEL_NAME="squishmatic_xfce4-panel"
+export XFCE_PANEL_CHANNEL_NAME
+
+# run Xfce session script
+exec startxfce4 "$@"
