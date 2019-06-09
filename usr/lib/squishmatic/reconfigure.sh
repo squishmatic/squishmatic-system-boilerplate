@@ -57,10 +57,9 @@ fi
 if [[ _VERBOSE -eq 1 ]]; then
     echo -e 'backup current configuration files.\n'
 fi
-sudo cp /etc/xdg/xfce4/panel/default.xml /etc/xdg/xfce4/panel/default.bak.xml
-sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.bak.xml
-sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.bak.xml
-
+sudo cp /etc/xdg/xfce4/panel/default.xml /etc/xdg/xfce4/panel/default.xml.bak
+sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml.bak
+sudo cp /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml.bak
 
 # symbolic link default configuration files
 if [[ _VERBOSE -eq 1 ]]; then
@@ -69,6 +68,7 @@ fi
 sudo ln -s /usr/share/squishmatic/xfce-perchannel-xml/panel/xfce4-panel.xml /etc/xdg/xfce4/panel/default.xml
 sudo ln -s /usr/share/squishmatic/xfce-perchannel-xml/xfconf/xfce4-session.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xfce4-session.xml
 sudo ln -s /usr/share/squishmatic/xfce-perchannel-xml/xfconf/xsettings.xml /etc/xdg/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
+ln -s /usr/share/squishmatic/panel/whiskermenu-10.rc $HOME/.config/xfce4/panel/whiskermenu-10.rc
 
 
 # reset user personalizations
@@ -81,9 +81,10 @@ if [[ _HARD -eq 1 ]]; then
     if [[ _VERBOSE -eq 1 ]]; then
         echo -e 'backup user personalizations.\n'
     fi
-    cp $HOME/.config/xfce4/xfce-perchannel-xml/squishmatic_xfce4-panel.xml $HOME/.config/xfce4/xfce-perchannel-xml/squishmatic_xfce4-panel.bak.xml
-    cp $HOME/.config/xfce4/xfce-perchannel-xml/xfce4-session.xml $HOME/.config/xfce4/xfce-perchannel-xml/xfce4-session.bak.xml
-    cp $HOME/.config/xfce4/xfce-perchannel-xml/xsettings.xml $HOME/.config/xfce4/xfce-perchannel-xml/xsettings.bak.xml
+    cp $HOME/.config/xfce4/xfce-perchannel-xml/squishmatic_xfce4-panel.xml $HOME/.config/xfce4/xfce-perchannel-xml/squishmatic_xfce4-panel.xml.bak
+    cp $HOME/.config/xfce4/xfce-perchannel-xml/xfce4-session.xml $HOME/.config/xfce4/xfce-perchannel-xml/xfce4-session.xml.bak
+    cp $HOME/.config/xfce4/xfce-perchannel-xml/xsettings.xml $HOME/.config/xfce4/xfce-perchannel-xml/xsettings.xml.bak
+    cp $HOME/.config/xfce4/panel/whiskermenu-10.rc $HOME/.config/xfce4/panel/whiskermenu-10.rc.bak
 
     # remove
     if [[ _VERBOSE -eq 1 ]]; then
@@ -92,6 +93,7 @@ if [[ _HARD -eq 1 ]]; then
     rm $HOME/.config/xfce4/xfce-perchannel-xml/squishmatic_xfce4-panel.xml
     rm $HOME/.config/xfce4/xfce-perchannel-xml/xfce4-session.xml
     rm $HOME/.config/xfce4/xfce-perchannel-xml/xsettings.xml
+    rm $HOME/.config/xfce4/panel/whiskermenu-10.rc
 fi
 
 
