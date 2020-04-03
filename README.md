@@ -10,7 +10,7 @@ https://github.com/squishmatic/squishmatic-project
 
  
 
-Squishmatic project team <https://squishmatic.com>
+Squishmatic project team
 
 Released under the terms of GNU GPLv3 License
 
